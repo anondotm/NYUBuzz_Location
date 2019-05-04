@@ -5,8 +5,9 @@
 //  Created by nyuguest on 4/27/19.
 //  Copyright © 2019 Team RSM. All rights reserved.
 //
-// NOTE: much of this code is adapted from the following tutorial by Axel Keel
+// NOTE: much of this code is adapted from the following two tutorials by Axel Keel and Andrew Kharchyshyn
 // https://fluffy.es/current-location/
+// https://www.raywenderlich.com/5247-core-location-tutorial-for-ios-tracking-visited-locations
 
 import UIKit
 import CoreLocation
@@ -23,12 +24,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var locationLabel: UILabel!
     
     let locationManager = CLLocationManager();  // we use locationManager to retrieve location info
+    let geoCoder = CLGeocoder(); // we use geoCoder to convert coordinates to an address
     
     //////////////////////////////
     // METHODS
     //////////////////////////////
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         locationManager.delegate = self;
         // ask to updateLocAuthoriz status
@@ -77,7 +80,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if (authZStatus == .authorizedAlways || authZStatus == .authorizedWhenInUse) {
             if let location = locations.first {
-                self.locationLabel.text = "\(location.coordinate)";
+                // self.locationLabel.text = "\(location.coordinate)";
+                
+                // converts location to address
+                geoCoder.reverseGeocodeLocation(location) { placemarks, _ in
+                    if let place = placemarks?.first {
+                        let description = "\(place)"
+                        self.locationLabel.text = description
+                    }
+                }
             }
         }
         else {
