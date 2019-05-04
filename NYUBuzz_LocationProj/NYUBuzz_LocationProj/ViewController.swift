@@ -95,4 +95,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.locationLabel.text = "ERROR: lacking correct locAuthZ status!"
         }
     }
+    
+    // catches any errors thrown by locationManager callsß
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationLabel.text = "locationManager Error: \(error)"
+    }
 }
