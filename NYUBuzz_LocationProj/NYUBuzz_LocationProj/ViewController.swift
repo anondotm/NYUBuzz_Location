@@ -96,7 +96,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    // catches any errors thrown by locationManager callsß
+    // catches any errors thrown by locationManager calls
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationLabel.text = "locationManager Error: \(error)"
     }

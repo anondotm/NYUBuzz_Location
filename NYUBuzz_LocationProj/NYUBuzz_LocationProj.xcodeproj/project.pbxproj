@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E999BD3227FA3C70028BC15 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E999BD2227FA3C70028BC15 /* HomeViewController.swift */; };
 		5EBBA6712274E44F00FF398F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBA6702274E44F00FF398F /* AppDelegate.swift */; };
 		5EBBA6732274E44F00FF398F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBA6722274E44F00FF398F /* ViewController.swift */; };
 		5EBBA6762274E44F00FF398F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBBA6742274E44F00FF398F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E999BD2227FA3C70028BC15 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5EBBA66D2274E44F00FF398F /* NYUBuzz_LocationProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYUBuzz_LocationProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBBA6702274E44F00FF398F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EBBA6722274E44F00FF398F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		5EBBA6642274E44F00FF398F = {
 			isa = PBXGroup;
 			children = (
+				5E999BD2227FA3C70028BC15 /* HomeViewController.swift */,
 				5EBBA66F2274E44F00FF398F /* NYUBuzz_LocationProj */,
 				5EBBA6842274E44F00FF398F /* NYUBuzz_LocationProjTests */,
 				5EBBA68F2274E44F00FF398F /* NYUBuzz_LocationProjUITests */,
@@ -261,6 +264,7 @@
 			files = (
 				5EBBA6732274E44F00FF398F /* ViewController.swift in Sources */,
 				5EBBA6712274E44F00FF398F /* AppDelegate.swift in Sources */,
+				5E999BD3227FA3C70028BC15 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
