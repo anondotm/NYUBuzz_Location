@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     //////////////////////////////
     let locationManager = CLLocationManager();  // we use locationManager to retrieve location info
     let geoCoder = CLGeocoder(); // we use geoCoder to convert coordinates to an address
+    let addressDist = 1000;      // distance in meters for two CLLocations to be within each other to be considered the same address
     var user: User;
     
     //////////////////////////////
@@ -36,6 +37,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     // checks if user is at an event they subscribed for, if so, rewards user! (called after we get user location)
     func checkIfAtEvent(user: User, atLocation: CLLocation, onDate: Date) {
         
+
+
+        for (index, event) in user.events.enumerated() {
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
